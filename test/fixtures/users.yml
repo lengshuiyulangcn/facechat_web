@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: 1
+  name: MyString
+  email: MyString
+  image: MyString
+  oauth_token: MyString
+  provider: MyString
+  nick_name: MyString
+  oauth_expires_at: 2016-07-13 19:08:45
+
+two:
+  uid: 1
+  name: MyString
+  email: MyString
+  image: MyString
+  oauth_token: MyString
+  provider: MyString
+  nick_name: MyString
+  oauth_expires_at: 2016-07-13 19:08:45

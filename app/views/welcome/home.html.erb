@@ -1,0 +1,10 @@
+<div>
+  <% if current_user %>
+    Hello, <%= current_user.nick_name %>
+    <%=link_to "logout", logout_path %>
+  <% else %>
+    <%=link_to "facebook login", "auth/facebook"%>
+    <%=link_to "twitter login", "auth/twitter"%>
+  <% end %>
+ </script>
+</div>

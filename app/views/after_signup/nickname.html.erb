@@ -1,0 +1,10 @@
+<%= form_for @user, url: wizard_path do |f| %>
+  <h2>Input your Nick Name</h2>
+  <div class="field">
+    <%= f.label :nick_name %><br />
+    <%= f.text_field :nick_name %>
+  </div>
+  <div class="actions">
+        <%= f.submit "Continue" %>
+  </div>
+<% end %>
