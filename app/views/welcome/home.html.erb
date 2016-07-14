@@ -1,10 +1,7 @@
 <div>
   <% if current_user %>
     Hello, <%= current_user.nick_name %>
-    <%=link_to "logout", logout_path %>
-  <% else %>
-    <%=link_to "facebook login", "auth/facebook"%>
-    <%=link_to "twitter login", "auth/twitter"%>
+  <%=link_to "logout", destroy_user_session_path, method: :delete %>
   <% end %>
  </script>
 </div>

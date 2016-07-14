@@ -277,6 +277,6 @@ Devise.setup do |config|
                    {:scope => 'email'} )
    config.omniauth( :twitter,
                    ENV['TWITTER_KEY'],
-                   ENV['TWITTER_SECRET'],
-                   {:scope => 'email'} )
+                   ENV['TWITTER_SECRET']
+                  )
 end
