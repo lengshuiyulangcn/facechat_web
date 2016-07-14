@@ -1,5 +1,5 @@
 class AfterSignupController < ApplicationController
-  before_action :authenticate
+  before_filter :authenticate_user!
   include Wicked::Wizard
   steps :nickname
 
