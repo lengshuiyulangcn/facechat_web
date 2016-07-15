@@ -18,8 +18,14 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
-<% end -%>
+  <%= button_tag :class =>"input-field col s6 btn blue darken-3" do %>
+    <%= link_to omniauth_authorize_path(resource_name, "facebook") do %>
+      <span style="color: white"><i class="fa fa-facebook"></i>facebook登陆</span>
+    <% end %>
+  <% end %>
+
+  <%= button_tag :class =>"input-field col s6 btn light-blue lighten-2" do %>
+    <%= link_to omniauth_authorize_path(resource_name, "twitter") do %>
+      <span style="color: white"><i class="fa fa-twitter"></i>twitter登陆</span>
+    <% end %>
+  <% end %>
