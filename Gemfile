@@ -30,13 +30,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Oauth Client
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+# Step wizard
 gem 'wicked'
+
+# Oauth provider
 gem 'doorkeeper'
+
+# authentification
 gem 'devise'
+
+## materialize design
+gem 'rails-assets-materialize', source: 'https://rails-assets.org'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
