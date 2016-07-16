@@ -1,7 +1,9 @@
-<div>
-  <% if current_user %>
-    Hello, <%= current_user.nick_name %>
-  <%=link_to "logout", destroy_user_session_path, method: :delete %>
-  <% end %>
- </script>
+
+<div class="container">
+  <div class="row">
+    <% if current_user %>
+      Hello, <%= current_user.nick_name %>
+    <%=link_to "logout", destroy_user_session_path, method: :delete %>
+    <% end %>
+  </div>
 </div>

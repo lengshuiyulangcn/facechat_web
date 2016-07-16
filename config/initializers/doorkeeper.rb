@@ -4,11 +4,16 @@ Doorkeeper.configure do
 
   # This block will be called to check whether the resource owner is authenticated or not.
   resource_owner_authenticator do
-    User.find_by_id(session[:user_id]) || redirect_to(root)
+    current_user || redirect_to(new_user_session_url)
   end
 
   # If you want to restrict access to the web interface for adding oauth authorized applications, you need to declare the block below.
-
+  admin_authenticator do
+    if !current_user.try(:admin)
+      # flash message
+      redirect_to(root_path)
+    end
+  end 
   # Authorization Code expiration time (default 10 minutes).
   # authorization_code_expires_in 10.minutes
 
